@@ -1,0 +1,35 @@
+$namespace: ab-mask;
+$maskFade: #{$namespace}-fade;
+
+.#{$namespace} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: opacity 400ms cubic-bezier(.7, .3, .1, 1);
+}
+
+.#{$maskFade} {
+  &-enter, &-appear {
+    opacity: 0;
+  }
+
+  &-enter-active, &-appear-active, &-enter-done {
+    opacity: 1;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    opacity: 0;
+  }
+
+  &-exit-done {
+    display: none;
+  }
+}

@@ -1,0 +1,70 @@
+$namespace: ab-trigger;
+$popupFade: #{$namespace}-fade;
+
+.#{$namespace} {
+  &-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.#{$popupFade} {
+  &-enter, &-hr-enter, &-appear, &-hr-appear {
+    opacity: 0;
+  }
+
+  &-enter, &-appear {
+    transform: scale(0.7);
+  }
+
+  &-hr-enter, &-hr-appear {
+    opacity: 0;
+    transform: scaleY(0.7);
+  }
+
+  &-enter-active, &-hr-enter-active, &-appear-active, &-hr-appear-active {
+    opacity: 1;
+    transition: opacity 200ms, transform 200ms;
+  }
+
+  &-enter-active, &-appear-active {
+    transform: scale(1);
+  }
+
+  &-hr-enter-active, &-hr-appear-active {
+    transform: scaleY(1);
+  }
+
+  &-exit, &-hr-exit {
+    opacity: 1;
+  }
+
+  &-exit-active, &-hr-exit-active {
+    opacity: 0;
+    transition: opacity 200ms, transform 200ms;
+  }
+
+  &-exit-active {
+    transform: scale(0.7);
+  }
+
+  &-hr-exit-active {
+    transform: scaleY(0.7);
+  }
+
+  &-exit-done, &-hr-exit-done {
+    display: none;
+  }
+}

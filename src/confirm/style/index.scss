@@ -1,0 +1,48 @@
+$namespace: ab-confirm;
+
+.#{$namespace} {
+  &-btns {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: .42rem;
+
+    .#{$namespace} {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &-ok, &-cancel {
+    overflow: hidden;
+    position: relative;
+    font-size: .12rem;
+    border-width: 1px;
+    border-style: solid;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: .05rem .3rem;
+    display: inline-block;
+    color: #fff;
+    margin-left: .3rem;
+  }
+
+  &-ok {
+    border-color: #bc0000;
+    background: linear-gradient(180deg, #c00000 0%, #c00000 0%, #a00000 100%, #a00000 100%);
+
+    &:hover {
+      border-color: #bc0000;
+      background: #bc0000;
+    }
+  }
+
+  &-cancel {
+    border-color: #808080;
+    background: linear-gradient(180deg, #909090 0%, #909090 0%, #707070 100%, #707070 100%);
+
+    &:hover {
+      border-color: #808080;
+      background: #808080;
+    }
+  }
+}

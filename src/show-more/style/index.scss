@@ -1,0 +1,21 @@
+$namespace: ab-show-more;
+
+.#{$namespace} {
+  &-ellipsis{
+    white-space: nowrap;
+  }
+  &-btn{
+    color: #4068b0;
+    cursor: pointer;
+  }
+  &-text{
+    visibility: hidden;
+  }
+  &-hidden{
+    visibility: hidden;
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}

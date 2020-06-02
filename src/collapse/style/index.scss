@@ -1,0 +1,43 @@
+$namespace: ab-collapse;
+$collapseFade: #{$namespace}-fade;
+
+.#{$namespace} {
+  transform-origin: left top;
+  overflow: hidden;
+  transition: opacity 200ms, height 200ms;
+  &-hidden{
+    height: 0;
+  }
+}
+
+.#{$collapseFade} {
+  &-enter {
+    opacity: 0.8;
+    overflow: hidden;
+  }
+
+  &-enter-active {
+    opacity: 1;
+    overflow: hidden;
+  }
+
+  &-enter-done {
+    opacity: 1;
+    overflow: initial;
+  }
+
+  &-exit {
+    opacity: 1;
+    overflow: hidden;
+  }
+
+  &-exit-active {
+    opacity: 0.8;
+    overflow: hidden;
+  }
+
+  &-exit-done {
+    display: none;
+    overflow: initial;
+  }
+}
