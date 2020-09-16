@@ -15,7 +15,7 @@ const globals = {
 const babelOptions = {
   exclude: /node_modules/,
   runtimeHelpers: true
-}
+};
 
 const commonjsOptions = {
   include: /node_modules/,
