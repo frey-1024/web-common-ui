@@ -1,0 +1,8 @@
+$namespace: ab-ellipsis;
+
+.#{$namespace} {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}

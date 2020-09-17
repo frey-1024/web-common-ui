@@ -1,21 +1,33 @@
 {
   "presets": [
+    "@babel/preset-env",
     "@babel/preset-react",
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "ie": "11",
-          "node": "current"
-        }
-      }
-    ]
+    "@babel/typescript"
   ],
   "plugins": [
     ["@babel/plugin-proposal-class-properties", { "loose": true }],
     ["@babel/plugin-transform-classes", { "loose": true }],
     "@babel/plugin-transform-runtime",
-    "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-transform-modules-commonjs"
-  ]
+    "@babel/plugin-proposal-export-default-from"
+  ],
+  "env": {
+    "esm": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "@babel/plugin-transform-runtime",
+          {
+            "useESModules": true
+          }
+        ]
+      ]
+    }
+  }
 }
